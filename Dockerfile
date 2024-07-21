@@ -4,9 +4,9 @@ RUN apt update && apt upgrade -y
 RUN apt install git -y
 COPY requirements.txt /requirements.txt
 
-RUN cd /
+RUN cd /LCU
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /Advance-File-Share-Bot
-WORKDIR /Advance-File-Share-Bot
+RUN mkdir /LCU
+WORKDIR /LCU
 COPY start.sh /start.sh
 CMD ["/bin/bash", "/start.sh"]
